@@ -12,13 +12,17 @@ export class LoginSignupService {
   public reg_url = "http://localhost:3000"
   
   constructor(private http: HttpClient,private apiService: ApiService) { }
-
+  //authorizationLogin
   authLogin(userName: string, password: string): Observable<any>{
     return this.apiService.get(this.login_url+'/user?email='+userName+'&password='+password);
   }
+
+  //userRegister
   userRegister(userDTO:any):Observable<any>{
     return this.apiService.post(this.reg_url+'/user',userDTO)
   }
+  
+  //adminLogin
   adminLogin(userName: string, password: string): Observable<any>{
     return this.apiService.get(this.login_url+'/user?email='+userName+'&password='+password+'&role=admin');
   }
