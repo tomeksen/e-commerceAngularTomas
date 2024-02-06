@@ -6,3 +6,12 @@
     border-width: 1px 0;
     box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
   }
+
+  .icon {
+    background: url('../../../../assets/images/logoEcommerceComplete.png');
+    height: 45px;
+    width:9rem;
+    display: block;
+    background-size: contain
+    /* Other styles here */
+}
